@@ -1,0 +1,47 @@
+<html>  
+<head><title>자료 올리기</title>
+    <style>
+        table {border-collapse:collapse;width:100%; position:relative; border:1px solid rgb(255, 215, 79);}
+        h1 {text-align: center; color:rgb(255, 215, 79);}
+        .button {position:relative; left:450; width:100px; height:30px; top:50;}
+        select {width:100px;}
+        th {color:rgb(255, 215, 79);}
+        #file {color:rgb(255, 215, 79);}
+    </style>
+</head>
+<body name><br><br>
+    <h1>자료올리기</h1>
+    <table border=1; name=if2>
+        <form>
+                <tr>
+                    <th>이름</th> <td><input type="text" size="65" name="name5"autocomplete="on" autofocus required></td> 
+                    <th>암호</th> <td colspan="2"><input type="password" size="20" name="pwd5" required></td>
+                </tr>
+                <tr>
+                    <th>제목</th> <td colspan="5"><input type="text" size="100" name="name6"></td>
+                </tr>
+                <tr>
+                    <th>파일</th><td ><input type="file" id=file></td>
+                    <th>형식</th>
+                        <td ><select name="option">
+                            <option>선택</option>
+                            <option>상담</option>
+                            <option>문의</option>
+                            <option>답변</option>
+                            <option>기타</option>
+                        </select> </td>
+                </tr>
+                <tr>
+                    <th>내용</th>
+                    <td colspan=5 height=200px>
+                        <textarea name="memo" rows="20" cols="135" maxlength="1000"></textarea>
+                    </td>
+                </tr>
+                
+            </form>
+    </table>
+    <input class=button type="submit" value="올리기">
+    <input class=button type="reset" value="지우기">
+                
+</body>
+</html>

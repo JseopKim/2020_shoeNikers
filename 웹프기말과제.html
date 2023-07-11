@@ -1,0 +1,343 @@
+﻿<html>
+<head>
+    <title>기말고사</title>
+    <style>
+        body { margin: 0;position: static ;}
+        .container {display:grid;width:100%;height:20%;
+                    grid-template-columns:1fr;
+                    grid-template-rows:1fr;
+                    position:fixed;
+                    top:0;
+                    z-index:10;}
+     
+        nav {width:100%;height:100%;background-color: black;margin: 0; clear: both;}
+        nav>div {margin:auto;width:100%;height:100%;}
+        article{width:100%;height:100%;margin: 0;  background: url("부스트.jpg") bottom/100% no-repeat;clear: both;}
+        .reason {width:100%;height:100%;text-align:left; color:rgb(255, 215, 79);}
+    section{width:100%;height:100%;clear: both; background-color: black;}
+.id{width:100%;height:2%;font-size:50px;text-align:center;color:rgb(255, 215, 79);clear: both;}
+#site {width:100%;height:60%;background-color: black; text-decoration: none; font-size: 40px;}
+        td>a {color:rgb(255, 215, 79); font-family: 'HY견고딕';text-shadow:2px 2px 2px rgb(255, 215, 79,0.7); text-decoration: none;}
+        .logo{background-color: black; width:100%;}
+        h3 {color :rgb(255, 215, 79);}
+        .site2 {color:rgb(255, 215, 79); text-decoration: none;}
+        .site2:hover { color:darkgrey;font-family: 'HY견고딕';text-shadow:2px 2px 2px rgb(255, 215, 79,0.7);}
+        #infor {width:50%;height:88%;color:rgb(255, 215, 79);font-size:30px;
+                margin-top:10%;}
+        footer {width:100%;height:14%;background-color:rgb(255, 215, 79);border: 5px solid rgb(255, 215, 79);}
+        input[type=search] {width:570px; height:50px; }
+        .ul {float:left; width:50%;}
+        #h1 {font-size:30px; font-family: 'HY견고딕';text-shadow:2px 2px 2px rgb(255, 215, 79,0.7);}
+        th>a>img {position:relative; width:100%;height:100%;}
+        h1 {font-family: 'HY견고딕';text-shadow:2px 2px 2px rgb(255, 215, 79,0.7);}
+        input[type=submit] {height:50px; width:50px; }
+        #brand > h1 {font-size: 50px; color:rgb(255, 215, 79);}
+        td>a:hover {color:darkgrey;font-family: 'HY견고딕';text-shadow:2px 2px 2px rgb(255, 215, 79,0.7);}
+        li {display:inline-block;}
+        h2 {font-size:15px; font-family: 'HY견고딕';}
+        .li>a {color:black; text-decoration: none;}
+        .li>b {font-weight:bold; font-size:25px;}
+        .table1 {margin-left: auto;margin-right: auto;}
+        a>img:hover {opacity: 0.5;}
+        .site3 {color:rgb(255, 215, 79);}
+    
+.slides {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+    position: relative;
+    
+}
+
+.slides * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+
+.slides input { display: none; }
+
+.slide-container { display: block; }
+
+.slide {
+
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    margin-left:auto;
+    margin-right:auto;
+    transform: scale(0);
+    transition: all .7s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav label {
+    width: 200px;
+    height: 100%;
+    display: none;
+    position: absolute;
+
+      opacity: 0;
+    z-index: 9;
+    cursor: pointer;
+
+    transition: opacity .2s;
+
+    color: #FFF;
+    font-size: 156pt;
+    text-align: center;
+    line-height: 380px;
+    font-family: "Varela Round", sans-serif;
+    background-color: rgba(255, 255, 255, .3);
+    text-shadow: 0px 0px 15px rgb(119, 119, 119);
+}
+
+.slide:hover + .nav label { opacity: 0.5; }
+
+.nav label:hover { opacity: 1; }
+
+.nav .next { right: 0; }
+
+input:checked + .slide-container  .slide {
+    opacity: 1;
+
+    transform: scale(1);
+
+    transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .nav label { display: block; }
+
+.nav-dots {
+    width: 100%;
+    bottom: 9px;
+    height: 11px;
+    display: block;
+    position: absolute;
+    text-align: center;
+}
+
+.nav-dots .nav-dot {
+    top: -5px;
+    width: 11px;
+    height: 11px;
+    margin: 0 4px;
+    position: relative;
+    border-radius: 100%;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.nav-dots .nav-dot:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+input#img-1:checked ~ .nav-dots label#img-dot-1,
+input#img-2:checked ~ .nav-dots label#img-dot-2,
+input#img-3:checked ~ .nav-dots label#img-dot-3,
+input#img-4:checked ~ .nav-dots label#img-dot-4,
+input#img-5:checked ~ .nav-dots label#img-dot-5,
+input#img-6:checked ~ .nav-dots label#img-dot-6 {
+    background: rgba(0, 0, 0, 0.8);
+}
+    </style>
+</head>
+<body>  
+    <header >
+    <div class=container>
+        <form method=get action=https://www.google.co.kr/search target="_self">
+            <table class="logo">
+                <tr>
+                    <th><a href=웹프기말과제.html><img src="로고4.png"></a></th>
+                    <td><input type=search name=q placeholder="검색어를 입력하시오.">
+                        <span><input type=submit value="검색"></span></td>
+                    <td><a href=공지사항1.html>공지사항</a></td><td><a href=회원가입1.html>회원가입</a></td><td><a href=로그인.html>로그인</a></td><td><a href=자료실.html>자료실</a></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    </header>
+    <nav>
+        
+            <ul class=slides>
+                <input type="radio" name="radio-btn" id="img-1" checked />
+                <li class="slide-container">
+                    <div class="slide">
+                    <img src="에어포스.jpg" /></a>
+                    </div>
+                    <div class="nav">
+                        <label for="img-6" class="prev">&#x2039;</label>
+                        <label for="img-2" class="next">&#x203a;</label>
+                    </div>
+                </li>
+            
+                <input type="radio" name="radio-btn" id="img-2" />
+                <li class="slide-container">
+                    <div class="slide">
+                    <img src="컨.jpg" />
+                    </div>
+                    <div class="nav">
+                        <label for="img-1" class="prev">&#x2039;</label>
+                        <label for="img-3" class="next">&#x203a;</label>
+                    </div>
+                </li>
+            
+                <input type="radio" name="radio-btn" id="img-3" />
+                <li class="slide-container">
+                    <div class="slide">
+                    <img src="에어조던.jpg" />
+                    </div>
+                    <div class="nav">
+                        <label for="img-2" class="prev">&#x2039;</label>
+                        <label for="img-4" class="next">&#x203a;</label>
+                    </div>
+                </li>
+            
+                <input type="radio" name="radio-btn" id="img-4" />
+                <li class="slide-container">
+                    <div class="slide">
+                    <img src="올스반.jpg" />
+                    </div>
+                    <div class="nav">
+                        <label for="img-3" class="prev">&#x2039;</label>
+                        <label for="img-5" class="next">&#x203a;</label>
+                    </div>
+                </li>
+            
+                <input type="radio" name="radio-btn" id="img-5" />
+                <li class="slide-container">
+                    <div class="slide">
+                    <img src="아닥.jpg" />
+                    </div>
+                    <div class="nav">
+                        <label for="img-4" class="prev">&#x2039;</label>
+                        <label for="img-6" class="next">&#x203a;</label>
+                    </div>
+                </li>
+            
+                <input type="radio" name="radio-btn" id="img-6" />
+                <li class="slide-container">
+                    <div class="slide">
+                    <img src="이지.jpg" />
+                    </div>
+                    <div class="nav">
+                        <label for="img-5" class="prev">&#x2039;</label>
+                        <label for="img-1" class="next">&#x203a;</label>
+                    </div>
+                </li>
+            
+                <li class="nav-dots">
+                <label for="img-1" class="nav-dot" id="img-dot-1"></label>
+                <label for="img-2" class="nav-dot" id="img-dot-2"></label>
+                <label for="img-3" class="nav-dot" id="img-dot-3"></label>
+                <label for="img-4" class="nav-dot" id="img-dot-4"></label>
+                <label for="img-5" class="nav-dot" id="img-dot-5"></label>
+                <label for="img-6" class="nav-dot" id="img-dot-6"></label>
+                </li>
+            </ul>
+       
+    </nav>
+    <article>
+        <div class="reason">
+            <ul class=ul>
+            <h1 id=h1>신발의 트렌드</h1><br><br>
+            <li>
+            <h1>미적인 측면에서의 디자인</h1><h3>옷을 입을때나 미적인 측면에서 신발은 <br>디자인도 여러가지 디자인이 나오고 
+            명품 브랜드나 연예인 그리고 운동선수와 콜라보 하면서 예쁘고 다양한 모습들의 신발을
+            보면서 관심이 많이 가게 되었다.</h3></li><br><br><br><br>
+            <li><h1>젊은 층 사이의 신발 재테크 "슈테크"</h1><h3>콜라보를 한 제품들의 신발은 공급보다 수요가 높다. <br>그 이유는
+                콜라보 한 신발들은 래플이라는 응모를 통해 한정수량의 신발을 얻을 수 있거나 선착순 구매를 통해 얻는 방법 외에는
+                당첨된 사람이 정가보다 높은 가격에 다시 되파는 "리셀"로 밖에 살 수가 없다.<br>이러한 이유로 슈테크를 하는 것도
+                신발을 주제로 한 이유 중 하나이다.</h3></li>
+                </ul>
+            </div>
+    </article>
+
+    <section>
+        
+            <table class=table1>
+                <tr>
+                    <th colspan=3 id="brand"><h1>B R A N D</h1></th>
+                </tr>
+                <tr>
+                    <th><a href="https://www.nike.com/kr/ko_kr"target=_blank><img src="나이키로고.png"></a></th>
+                    <th><a href="https://shop.adidas.co.kr/"target=_blank><img src="아디다스로고.png"></a></th>
+                    <th><a href="https://www.converse.co.kr/"target=_blank><img src="컨버스로고.png"></a></th>
+                </tr>
+                <tr>
+                    <th><a href="https://shop.vans.co.kr/"target=_blank><img src="반스로고.png"></a></th>
+                    <th><a href="https://www.nbkorea.com/"target=_blank><img src="뉴발란스로고.png"></a></th>
+                    <th><a href="https://kr.puma.com/"target=_blank><img src="푸마로고.png"></a></th>
+                </tr>
+            </table>
+        
+    </section>
+    
+<div class="id1">
+    <table id="site">
+        <tr>
+            <th rowspan=5 id=infor>
+                <b>일부 신발은<br>콜라보 제품으로 공급이 아주 적지만<br>갖고 싶어하는 사람들 때문에<br>신발을 되파는 리셀사이트가 생겨남</b>
+            </th>
+        </tr>
+        <tr>
+            <th class=site3>
+               - Best Resell Site -
+            </th>
+        </tr>
+        <tr>
+            <th class=site>
+                <a href="https://xxblue.com"target=_blank class=site2><b>1. XXblue</b></a>
+            </th>
+        </tr>
+        <tr>
+            <th class=site>
+                <a href="https://stockx.com"target=_blank class=site2><b>2. Stock X</b></a>
+            </th>
+        </tr>
+        <tr>
+            <th class=site>
+                <a href="https://outofstock.co.kr"target=_blank class=site2><b>3. Out Of Stock</b></a>
+            </th>
+        </tr>
+    </table>
+</div>
+    <footer>
+        <div>
+            <h2>기획자 및 편집자</h2>
+            <ul class=adress>
+                <li class=li>
+                    <b>고성한</b><a href="mailto:buyon14@naver.com"target=_blank class=ad> E-Mail</a>
+                    <a href="https://www.instagram.com/kosunghan"target=_blank class=ad> SNS</a><br>
+                    010-2643-****
+                </li>
+                <li class=li>
+                    <b>김남규</b><a href="mailto:rlaskarb55@naver.com"target=_blank class=ad> E-Mail</a>
+                    <a href="https://www.instagram.com/keemnamgyu"target=_blank class=ad> SNS</a><br>
+                    010-4113-****
+                </li>
+                <li class=li>
+                    <b>김지섭</b><a href="mailto:seop5646@gmail.com"target=_blank class=ad> E-Mail</a>
+                    <a href="https://www.instagram.com/ootd_js_"target=_blank class=ad> SNS</a><br>
+                    010-6553-****
+                </li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
+

@@ -1,0 +1,49 @@
+<html>
+<head><title>공지사항</title>
+    <style>
+        body {background-color: black;}
+        .container {display:grid;width:100%;height:20%;
+                    grid-template-columns:1fr;
+                    grid-template-rows:1fr;
+                    }
+      
+        tr {width:100%;height:100%;}
+        th>h1 {float:left; color:rgb(255, 215, 79); font-family: 'HY견고딕';text-shadow:2px 2px 2px rgb(255, 215, 79,0.7);}
+        td>a {color:rgb(255, 215, 79); text-decoration: none; font-family: 'HY견고딕';text-shadow:2px 2px 2px rgb(255, 215, 79,0.7);}
+        td>a:hover {color:darkgrey; font-family: 'HY견고딕';text-shadow:2px 2px 2px rgb(255, 215, 79,0.7);}
+        table {border:1; background-color: black; text-align:center;}
+        nav {width:15%; height:100%; float:left; background-color: black; text-align: center; position:relative;}
+        th>a { text-decoration: none; font-size:30pt; color:rgb(255, 215, 79);} 
+        aside {width:85%; height:100%; float:right;}
+        .a { width:800px; border-collapse:collapse; border-top:2px solid #8d8d8d;}
+        iframe {width:100%;height:100%; background-color: black; color:rgb(255, 215, 79); border: none;}
+        #abc {font-size: 3rem; color:rgb(255, 215, 79); text-decoration: none; font-family: 'HY견고딕';text-shadow:2px 2px 2px rgb(255, 215, 79,0.7);}
+        .ul {color:rgb(255, 215, 79);}
+        .li {list-style: none; font-size:1.5rem; }
+        .li>a {text-decoration: none; color:rgb(255, 215, 79); font-family: 'HY견고딕';text-shadow:2px 2px 2px rgb(255, 215, 79,0.7);}
+        iframe {width:100%;height:100%; background-color: black; color:rgb(255, 215, 79); border: none;}
+
+    </style>
+</head>
+<body>
+    <header class=container>
+        <table>
+            <tr>
+                <th><a href=웹프기말과제.html><img src="로고4.png"></a></th>
+                <th><h1>신발과 스니커즈의 모든 것 ShoeNikers</h1></th>
+                <td><a href=공지사항1.html>공지사항</a></td><td><a href=회원가입1.html>회원가입</a></td><td><a href=로그인.html>로그인</a></td><td><a href=자료실.html>자료실</a></td>
+            </tr>
+        </table>       
+    </header>
+    <nav>
+        <p id=abc>자료실</p>
+        <ul class=ul>
+            <li class=li><a href=자료실.html>자료실목록</a></li>
+            <li class=li><a href=자료실2.html#if2 target=if>자료올리기</a></li>
+        </ul>
+    </nav>
+    <aside>
+        <iframe src=자료실1.html name=if></iframe>
+    </aside>
+</body>
+</html>
